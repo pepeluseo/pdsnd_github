@@ -1,3 +1,14 @@
+"""
+Bikeshare Data Analysis Script
+
+This script allows users to explore bikeshare data by selecting
+a city, month, and day. It displays statistics related to trip
+duration and user behavior.
+
+This file is used as part of a Git and GitHub workflow practice
+project for Udacity.
+"""
+
 import time
 import pandas as pd
 import numpy as np
@@ -43,6 +54,8 @@ def get_filters():
     print("Hello! Let's explore some US bikeshare data!")
     print()
 
+# Prompt the user to input a city, month, and day
+
     city = _prompt_choice(
         "Please enter a city (chicago, new york city, washington):\n> ",
         list(CITY_DATA.keys()),
@@ -61,6 +74,7 @@ def get_filters():
     print("-" * 40)
     return city, month, day
 
+# Load data for the selected city and filter by month and day
 
 def load_data(city, month, day):
     """
