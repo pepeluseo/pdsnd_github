@@ -96,6 +96,7 @@ def load_data(city, month, day):
 
     return df
 
+        # safe mode helper to handle empty series when calculating mode
 
 def _safe_mode(series):
     """
