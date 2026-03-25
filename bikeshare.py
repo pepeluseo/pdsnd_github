@@ -11,7 +11,7 @@ project for Udacity.
 
 import time
 import pandas as pd
-import numpy as np
+
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -110,6 +110,7 @@ def load_data(city, month, day):
 
     return df
 
+        # safe mode helper to handle empty series when calculating mode
 
 def _safe_mode(series):
     """
